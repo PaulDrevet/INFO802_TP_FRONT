@@ -85,7 +85,7 @@ export class CitiesComponent {
 
   async getCountries(event: AutoCompleteCompleteEvent) {
 
-    const response = await axios.get('http://localhost/country', {
+    const response = await axios.get('https://rapi-road.drevetpaul.com/country', {
       params: {
         input: event.query
       }

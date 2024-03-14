@@ -53,14 +53,13 @@ export class VehicleListComponent implements OnInit {
   }
 
   async getVehicleDetail(vehiculeId: any): Promise<any> {
-    const vehicleDetail = await axios.get('http://localhost/vehicle/' + vehiculeId);
+    const vehicleDetail = await axios.get('https://rapi-road.drevetpaul.com/vehicle/' + vehiculeId);
     return vehicleDetail.data.data.vehicle;
   }
 
   async getVehicleList (){
-    //const response = await axios.get('http://localhost/vehicle');
-    //this.vehicleList = response.data.data.vehicles;
-    this.vehicleList = list;
+    const response = await axios.get('https://rapi-road.drevetpaul.com/vehicle');
+    this.vehicleList = response.data.data.vehicles;
   }
 
 

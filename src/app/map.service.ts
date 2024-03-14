@@ -74,7 +74,7 @@ export class MapService {
     };
 
     try {
-      const response = await axios.post('http://localhost/road', requestBody);
+      const response = await axios.post('https://rapi-road.drevetpaul.com/road', requestBody);
 
       this.drawMarkers(response.data.data.steps)
       this.drawRoad(response.data.data.road)
